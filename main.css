@@ -1,0 +1,226 @@
+body {
+  background: #2a746c;
+}
+
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.card {
+  background: #ffffff;
+  margin: 2px;
+  box-sizing: border-box;
+  flex: 1 1 7%;
+  height: 8vw;
+  border: 2px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card img {
+  max-width: 30%;
+  align-self: center;
+}
+
+.card p {
+  margin: 3px;
+  font-size: 10px;
+}
+
+.card p:last-child {
+  transform: rotate(180deg);
+}
+
+.back {
+  background: url("https://w0.peakpx.com/wallpaper/999/481/HD-wallpaper-messi-argentina-lionel-messi-jersey.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.paired {
+  background-color: #dae0e3;
+}
+
+#header {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 85%;
+}
+
+#header .title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+#header .title img {
+  max-width: 3em;
+}
+
+#header .title h2 {
+  padding-left: 0.5em;
+}
+
+#header .score {
+  margin: 0;
+  color: #6c90ac;
+}
+
+#header .tried {
+  margin-top: 0;
+}
+
+.wrong {
+  animation-name: wrongAnimation;
+  animation-duration: 0.2s;
+  animation-iteration-count: 5;
+}
+
+@keyframes wrongAnimation {
+  to {
+    border: 2px solid #ffd54f;
+  }
+}
+
+/** Game finished **/
+.completed {
+  position: absolute;
+  z-index: 999;
+  top: 33vh;
+  background-color: RGBA(232, 246, 254, 0.8);
+  width: 100vw;
+  padding: 50px 0;
+}
+
+.completed>p {
+  font-size: 1.5em;
+  color: black;
+  text-align: center;
+  margin: 0;
+}
+
+.completed>p:first-child {
+  font-size: 3em;
+  font-weight: 700;
+  color: #758d9a;
+}
+
+body {
+  background: #234;
+}
+
+@keyframes firework {
+  0% {
+    transform: translate(-50%, 60vh);
+    width: 0.1vmin;
+    opacity: 1;
+  }
+
+  50% {
+    width: 0.5vmin;
+    opacity: 1;
+  }
+
+  100% {
+    width: 40vmin;
+    opacity: 0;
+  }
+}
+
+.firework,
+.firework::before,
+.firework::after {
+  --top: 60vh;
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  width: 0.5vmin;
+  aspect-ratio: 1;
+  background:
+    /* random backgrounds */
+    radial-gradient(circle, #43e463 0.2vmin, #0000 0) 50% 00%,
+    radial-gradient(circle, #ff6a63 0.3vmin, #0000 0) 00% 50%,
+    radial-gradient(circle, #43e463 0.5vmin, #0000 0) 50% 59%,
+    radial-gradient(circle, #ff6a63 0.5vmin, #0000 0) 99% 50%,
+    radial-gradient(circle, #ff6a63 0.3vmin, #0000 0) 80% 90%,
+    radial-gradient(circle, #ff6a63 0.5vmin, #0000 0) 95% 50%,
+    radial-gradient(circle, #ff6a63 0.5vmin, #0000 0) 10% 60%,
+    radial-gradient(circle, #ff6a63 0.2vmin, #0000 0) 31% 80%,
+    radial-gradient(circle, #43e463 0.5vmin, #0000 0) 69% 13%,
+    radial-gradient(circle, #ff6a63 0.1vmin, #0000 0) 50% 2%,
+    radial-gradient(circle, #ff6a63 0.3vmin, #0000 0) 66% 14%,
+    radial-gradient(circle, #ff6a63 0.4vmin, #0000 0) 77% 50%,
+    radial-gradient(circle, #ff0 0.2vmin, #0000 0) 90% 23%,
+    radial-gradient(circle, #3395b8 0.3vmin, #0000 0) 45% 20%,
+    radial-gradient(circle, #43e463 0.1vmin, #0000 0) 15% 30%,
+    radial-gradient(circle, #43e463 0.1vmin, #0000 0) 13% 2%,
+    radial-gradient(circle, #43e463 0.1vmin, #0000 0) 40% 30%,
+    radial-gradient(circle, #43e463 0.1vmin, #0000 0) 6% 10%,
+    radial-gradient(circle, #43e463 0.1vmin, #0000 0) 8% 1%,
+    radial-gradient(circle, #43e463 0.1vmin, #0000 0) 13% 24%;
+  background-size: 0.5vmin 0.5vmin;
+  background-repeat: no-repeat;
+  animation: firework 1.9s infinite;
+}
+
+.firework::before {
+  transform: translate(-50%, -50%) rotate(25deg) !important;
+}
+
+.firework::after {
+  transform: translate(-50%, -50%) rotate(-37deg) !important;
+}
+
+.firework2,
+.firework2::before,
+.firework2::after {
+  --top: 60vh;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 0.5vmin;
+  aspect-ratio: 1;
+  background:
+    /* random backgrounds */
+    radial-gradient(circle, #3395b8 0.2vmin, #0000 0) 50% 00%,
+    radial-gradient(circle, #ff6a63 0.3vmin, #0000 0) 00% 50%,
+    radial-gradient(circle, #3395b8 0.5vmin, #0000 0) 50% 59%,
+    radial-gradient(circle, #3395b8 0.5vmin, #0000 0) 99% 50%,
+    radial-gradient(circle, #3395b8 0.3vmin, #0000 0) 80% 90%,
+    radial-gradient(circle, #3395b8 0.5vmin, #0000 0) 95% 50%,
+    radial-gradient(circle, #3395b8 0.5vmin, #0000 0) 10% 60%,
+    radial-gradient(circle, #ff6a63 0.2vmin, #0000 0) 31% 80%,
+    radial-gradient(circle, #3395b8 0.5vmin, #0000 0) 69% 13%,
+    radial-gradient(circle, #3395b8 0.1vmin, #0000 0) 50% 2%,
+    radial-gradient(circle, #3395b8 0.3vmin, #0000 0) 66% 14%,
+    radial-gradient(circle, #3395b8 0.4vmin, #0000 0) 77% 50%,
+    radial-gradient(circle, #3395b8 0.2vmin, #0000 0) 90% 23%,
+    radial-gradient(circle, #3395b8 0.3vmin, #0000 0) 45% 20%,
+    radial-gradient(circle, #3395b8 0.1vmin, #0000 0) 15% 30%,
+    radial-gradient(circle, #43e463 0.1vmin, #0000 0) 13% 2%,
+    radial-gradient(circle, #43e463 0.1vmin, #0000 0) 40% 30%,
+    radial-gradient(circle, #3395b8 0.1vmin, #0000 0) 6% 10%,
+    radial-gradient(circle, #43e463 0.1vmin, #0000 0) 8% 1%,
+    radial-gradient(circle, #3395b8 0.1vmin, #0000 0) 13% 24%;
+  background-size: 0.5vmin 0.5vmin;
+  background-repeat: no-repeat;
+  animation: firework 2.3s infinite;
+}
+
+.firework2::before {
+  transform: translate(-50%, -50%) rotate(25deg) !important;
+}
+
+.firework2::after {
+  transform: translate(-50%, -50%) rotate(-37deg) !important;
+}
