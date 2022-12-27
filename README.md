@@ -18,4 +18,7 @@ based on the `state` of game. So it is particularly important concept in this ga
 ### Animation
 There are also a couple animation shown in the game when there are particular event triggered.
 
+### Score
+Once 2 cards are paired, score will be up 10 points. Total score will be 260 if the game is completed.
+
 <img width="1506" alt="截圖 2022-12-27 下午2 10 56" src="https://user-images.githubusercontent.com/121414639/209619875-686a47d9-25e9-4cad-83a9-2882bfb7266c.png">
