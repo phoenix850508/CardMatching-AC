@@ -6,6 +6,9 @@ both cards will flip back to the default face-down position.
 
 The game will be finished once all 52 cards have a matched pair, the number attemped will also be shown in the completed scene!
 
+## Installation
+This project is a relative simple cencept, you can check the static page following the link: https://phoenix850508.github.io/CardMatching-AC/ 
+
 ## Specs
 
 ### MVC design
